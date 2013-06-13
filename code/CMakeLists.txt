@@ -63,6 +63,7 @@ if(BuildSPEngine)
 		find_package(SDL2 REQUIRED)
 		set(SPEngineIncludeDirectories ${SPEngineIncludeDirectories} ${SDL2_INCLUDE_DIR})
 		set(SPEngineLibraries ${SPEngineLibraries} ${SDL2_LIBRARY})
+        include_directories(${SDL2_INCLUDE_DIR})
 	endif(NOT WIN32)
 
 	

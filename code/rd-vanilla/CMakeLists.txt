@@ -163,6 +163,7 @@ if(NOT WIN32)
 	find_package(SDL2 REQUIRED)
 	set(SPRDVanillaRendererIncludeDirectories ${SPRDVanillaRendererIncludeDirectories} ${SDL2_INCLUDE_DIR})
 	set(SPRDVanillaRendererLibraries ${SPRDVanillaRendererLibraries} ${SDL2_LIBRARY})
+    include_directories(${SDL2_INCLUDE_DIR})
 endif(NOT WIN32)
 
 add_library(${SPRDVanillaRenderer} SHARED ${SPRDVanillaFiles})

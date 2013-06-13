@@ -387,6 +387,7 @@ if(BuildMPEngine)
 		find_package(SDL2 REQUIRED)
 		set(MPEngineIncludeDirectories ${MPEngineIncludeDirectories} ${SDL2_INCLUDE_DIR})
 		set(MPEngineLibraries ${MPEngineLibraries} ${SDL2_LIBRARY})
+        include_directories(${SDL2_INCLUDE_DIR})
 	endif(NOT WIN32)
 
 	# EAX is Windows-Only (right?)
