@@ -248,7 +248,7 @@ void CIcarus::DeleteIcarusID( int& icarusID )
 	}
 
 	CTaskManager	*taskManager = sequencer->GetTaskManager();
-	if (taskManager->IsResident())
+    if (taskManager && taskManager->IsResident())
 	{
 		IGameInterface::GetGame()->DebugPrint( IGameInterface::WL_ERROR, "Refusing DeleteIcarusID(%d) because it is running!\n", icarusID);
 		assert(0);

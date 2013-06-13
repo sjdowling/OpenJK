@@ -53,7 +53,7 @@ void SetMiscModelModels( char *modelNameString, gentity_t *ent, qboolean damage_
 		ent->spawnflags |= 4; // deadsolid
 
 		//Chunk model
-		strcat( chunkModel, "_c1.md3" );
+        strncat( chunkModel, "_c1.md3", sizeof(chunkModel));
 		ent->s.modelindex3 = G_ModelIndex( chunkModel );
 	}
 }

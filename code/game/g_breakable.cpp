@@ -1194,13 +1194,13 @@ void SP_misc_model_breakable( gentity_t *ent )
 		}
 		
 		//Chunk model
-		strcat( chunkModel, "_c1.md3" );
+        strncat( chunkModel, "_c1.md3", sizeof(chunkModel));
 		ent->s.modelindex3 = G_ModelIndex( chunkModel );
 	}
 
 	//Use model
 	if( ent->spawnflags & 32 ) {	//has umodel
-		strcat( useModel, "_u1.md3" );
+        strncat( useModel, "_u1.md3", sizeof(useModel));
 		ent->sound1to2 = G_ModelIndex( useModel );
 	}
 	if ( !ent->mins[0] && !ent->mins[1] && !ent->mins[2] )
